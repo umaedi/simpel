@@ -26,6 +26,41 @@
               <h1 class="h6 mb-0 text-white lh-1">{{ __('Survey Kepuasan Masyarakat') }}</h1>
             </div>
         </div>
+        <form action="">
+            <div class="my-3 p-3 rounded shadow-sm">
+              <div class="form-group mb-3">
+                <label for="name">Nama</label>
+                <input type="text" class="form-control" id="name" name="name">
+              </div>
+              <div class="form-group mb-3">
+                <label for="ttl">Tanggal Lahir</label>
+                <input type="date" class="form-control" id="ttl" name="tgl_lahir">
+              </div>
+              <div class="form-group mb-3">
+                <label for="jenis_kelamin">Jenis Kelaim</label>
+                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                  <option value="">Pilih</option>
+                  <option value="1">Laki-Laki</option>
+                  <option value="2">Permepuan</option>
+                </select>
+              </div>
+              <div class="form-group mb-3">
+                <label for="pendidikan">Pendidikan</label>
+                <select class="form-control" id="pendidikan" name="pendidikan">
+                  <option value="">Pilih</option>
+                  <option value="1">SD</option>
+                  <option value="2">SMP</option>
+                  <option value="3">SMA/SMK/Sederajat</option>
+                  <option value="4">Diploma 3</option>
+                  <option value="5">Sarjana</option>
+                  <option value="6">Master</option>
+                </select>
+              </div>
+              <div class="form-group mb-3">
+                <label for="alamat">Alamat</label>
+                <textarea type="text" class="form-control" id="alamat" name="alamat"></textarea>
+              </div>
+            </div>
             <div class="faq__wrapper my-3 p-3 rounded shadow-sm">
                 <div class="accordion" id="accordionExample">
                    <div class="accordion-item">
@@ -37,31 +72,31 @@
                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                        <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_2" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_3" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -78,31 +113,31 @@
                      <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_2" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_3" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -113,78 +148,78 @@
                    <div class="accordion-item">
                      <h2 class="accordion-header" id="heading3">
                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                        Bagaimana pendapat saudara tentang kewajaran biaya\tarif dalam pelayanan ?	
+                        Bagaimana pendapat saudara tentang kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan denga hasil yang diberikan?	
                        </button>
                      </h2>
                      <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_2" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_3" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
                           </div>
                        </div>
-                     </div>
+                    </div>
                    </div>
                    <div class="accordion-item">
                      <h2 class="accordion-header" id="heading4">
                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                        Bagaimana pendapat saudara tentang kewajaran biaya\tarif dalam pelayanan ?	
+                        Bagaimana pendapat saudara tentang kompetensi\ kemampuan petugas dalam memberikan pelayanan?	
                        </button>
                      </h2>
                      <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -195,37 +230,37 @@
                    <div class="accordion-item">
                      <h2 class="accordion-header" id="heading5">
                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                        Bagaimana pendapat saudara tentang kewajaran biaya\tarif dalam pelayanan ?	
+                        Bagaimana pendapat saudara tentang kemudahan prosedur pelayanan pada unit ini ?	
                        </button>
                      </h2>
                      <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -236,37 +271,37 @@
                    <div class="accordion-item">
                      <h2 class="accordion-header" id="heading6">
                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                        Bagaimana pendapat saudara tentang kewajaran biaya\tarif dalam pelayanan ?	
+                        Bagaimana pendapat saudara tentang kecepatan waktu dalam memberikan pelayanan ?
                        </button>
                      </h2>
                      <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -277,37 +312,37 @@
                    <div class="accordion-item">
                      <h2 class="accordion-header" id="heading7">
                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                        Bagaimana pendapat saudara tentang kewajaran biaya\tarif dalam pelayanan ?	
+                        Bagaimana pendapat saudara tentang penanganan pengaduan pengguna layanan?
                        </button>
                      </h2>
                      <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -318,37 +353,37 @@
                    <div class="accordion-item">
                      <h2 class="accordion-header" id="heading8">
                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                        Bagaimana pendapat saudara tentang kewajaran biaya\tarif dalam pelayanan ?	
+                        Bagaimana pendapat saudara tentang kesopanan dan keramahan petugas dalam memberikan pelayanan?	
                        </button>
                      </h2>
                      <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -359,37 +394,37 @@
                    <div class="accordion-item">
                      <h2 class="accordion-header" id="heading9">
                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                        Bagaimana pendapat saudara tentang kewajaran biaya\tarif dalam pelayanan ?	
+                        Bagaimana pendapat saudara tentang kualitas sarana dan prasarana?
                        </button>
                      </h2>
                      <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv2" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv3" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv4" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="surv5" value="option2">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -398,7 +433,9 @@
                      </div>
                    </div>
                 </div>
+                <button type="submit" class="w-btn mt-3">KIIRM</button>
             </div>
+          </form>
         </div>
     </div>
  </section>
