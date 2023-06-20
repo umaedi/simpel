@@ -7,6 +7,7 @@
       <title>{{ $title  ?? 'Sistem Manajemen Pelayan Publik Elektronik'}}</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="csrf-token" content="{{ csrf_token() }}">
       <!-- Place favicon.ico in the root directory -->
       <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend') }}/img/favicon.png">
       <!-- CSS here -->
@@ -64,9 +65,9 @@
                      <div class="main-menu">
                         <nav id="mobile-menu">
                            <ul>
-                              <li><a href="contact.html">HOME</a></li>
-                              <li><a href="contact.html">DATA STATISTIK</a></li>
-                              <li><a href="contact.html">SARAN DAN ADUAN</a></li>
+                              <li><a href="/">HOME</a></li>
+                              <li><a href="#">DATA STATISTIK</a></li>
+                              <li><a href="{{ route('layanan.pengaduan') }}">SARAN DAN ADUAN</a></li>
                            </ul>
                         </nav>
                      </div>
@@ -154,6 +155,26 @@
       <script src="{{ asset('frontend') }}/js/wow.min.js"></script>
       <script src="{{ asset('frontend') }}/js/imagesloaded.pkgd.min.js"></script>
       <script src="{{ asset('frontend') }}/js/main.js"></script>
+      <script src="{{ asset('frontend') }}/js/sweetalert.min.js"></script>
+
+      <script type="text/javascript">
+      var token =  $('meta[name="token"]').attr('content')
+        async function transAjax(data) {
+        html = null;
+        data.headers = {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+            'Authorization': `Bearer ${token}`,
+        }
+        await $.ajax(data).done(function(res) {
+            html = res;
+        })
+            .fail(function() {
+                return false;
+            })
+        return html
+        }
+      </script>
+      @stack('js')
    </body>
 
 </html>

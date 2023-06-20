@@ -21,4 +21,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', \App\Http\Controllers\Frontend\LandingpageController::class);
 Route::prefix('user')->group(function () {
     Route::get('/layanan', [\App\Http\Controllers\Frontend\LayananController::class, 'index'])->name('layanan');
+    Route::get('/layanan/pengaduan', [\App\Http\Controllers\Frontend\PengaduanController::class, 'index'])->name('layanan.pengaduan');
+    Route::post('/layanan/pengaduan/store', [\App\Http\Controllers\Frontend\PengaduanController::class, 'store'])->name('layanan.pengaduan.store');
+
+    //survey
+    Route::get('/survey', [\App\Http\Controllers\Frontend\SurveyController::class, 'index'])->name('survey.index');
+
+    //notifikasi
+    Route::get('/notofikasi/sukses', \App\Http\Controllers\Frontend\NotifikasiController::class);
 });

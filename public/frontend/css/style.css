@@ -304,7 +304,7 @@ p {
 }
 
 .dark-blue-bg {
-  background: #063e85;
+  background: #063E85;
 }
 
 .footer-bg-3 {
@@ -330,6 +330,7 @@ p {
 .blue-bg-10 {
   background: #5f55ff;
 }
+
 
 /*--
     - color
@@ -468,10 +469,10 @@ p {
 .w-btn {
   font-size: 15px;
   color: #ffffff;
-  background: #7127ea;
+  background: #063E85;
   height: 44px;
   line-height: 40px;
-  border: 2px solid #7127ea;
+  border: 2px solid #063E85;
   text-align: center;
   padding: 0 30px;
   display: inline-block;
@@ -502,7 +503,7 @@ p {
   background: #ffffff;
 }
 .w-btn:hover {
-  color: #7127ea;
+  color: #063E85;
   -webkit-box-shadow: 0px 20px 60px 0px rgba(15, 0, 40, 0.2);
   -moz-box-shadow: 0px 20px 60px 0px rgba(15, 0, 40, 0.2);
   box-shadow: 0px 20px 60px 0px rgba(15, 0, 40, 0.2);
@@ -523,7 +524,7 @@ p {
 }
 .w-btn-transparent:hover {
   background: transparent;
-  color: #7127ea;
+  color: #063E85;
 }
 .w-btn-transparent-2 {
   font-size: 15px;

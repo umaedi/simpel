@@ -18,7 +18,7 @@
             </div>
          </div>
       </div>
-   </section>
+</section>
 <section class="services__area p-relative pt-100 pb-130">
     <div class="services__shape">
        <img class="services-circle-1" src="{{ asset('frontend') }}/img/icon/services/home-1/circle-1.png" alt="">
@@ -52,13 +52,13 @@
           </div>
           <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-2">
              <div class="services__inner hover__active active mb-30 wow fadeInUp" data-wow-delay=".5s">
-                <a href="">
+                <a href="{{ route('layanan.pengaduan') }}">
                 <div class="services__item white-bg mb-30 text-center transition-3" >
                    <div class="services__icon mb-25 d-flex align-items-end justify-content-center">
                       <img src="{{ asset('frontend') }}/img/icon/services/home-1/services-2.png" alt="">
                    </div>
                    <div class="services__content">
-                      <h3 class="services__title"><a href="services-details.html">Pengaduan</a></h3>
+                      <h3 class="services__title">Pengaduan</h3>
                       <p>Saran dan aduan masyarakat.</p>
                    </div>
                 </div>
@@ -67,13 +67,13 @@
           </div>
           <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
              <div class="services__inner hover__active mb-30 wow fadeInUp" data-wow-delay=".7s">
-                <a href="">
+                <a href="{{ route('survey.index') }}">
                 <div class="services__item white-bg text-center transition-3">
                    <div class="services__icon mb-25 d-flex align-items-end justify-content-center">
                       <img src="{{ asset('frontend') }}/img/icon/services/home-1/services-3.png" alt="">
                    </div>
                    <div class="services__content">
-                      <h3 class="services__title"><a href="services-details.html">Survey</a></h3>
+                      <h3 class="services__title">Survey</h3>
                       <p>Survey kepuasan masyarakat.</p>
                    </div>
                 </div>

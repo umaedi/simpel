@@ -24,10 +24,9 @@
             </div>
          </div>
          <div class="hero__btn-4 text-center">
-            <a href="{{ route('layanan') }}" class="w-btn-round mr-25 wow fadeInUp" data-wow-delay=".9s">Buka halaman utama</a>
+            <a href="{{ route('layanan') }}" class="w-btn-round mr-25 wow fadeInUp" data-wow-delay=".9s">Lihat Layanan</a>
          </div>
        </div>
     </div>
  </section>
- <!-- hero area end -->
 @endsection
