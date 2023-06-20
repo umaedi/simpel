@@ -36,7 +36,7 @@
        </div>
        <div class="row">
           <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-2">
-             <div class="services__inner hover__active mb-30 wow fadeInUp" data-wow-delay=".3s">
+             <div class="services__inner hover__active active mb-30 wow fadeInUp" data-wow-delay=".3s">
                 <a href="">
                 <div class="services__item white-bg text-center transition-3 ">
                    <div class="services__icon mb-25 d-flex align-items-end justify-content-center">
@@ -51,7 +51,7 @@
              </div>
           </div>
           <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-2">
-             <div class="services__inner hover__active active mb-30 wow fadeInUp" data-wow-delay=".5s">
+             <div class="services__inner hover__active mb-30 wow fadeInUp" data-wow-delay=".5s">
                 <a href="{{ route('layanan.pengaduan') }}">
                 <div class="services__item white-bg mb-30 text-center transition-3" >
                    <div class="services__icon mb-25 d-flex align-items-end justify-content-center">
