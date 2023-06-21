@@ -30,15 +30,15 @@
             <div class="my-3 p-3 rounded shadow-sm">
               <div class="form-group mb-3">
                 <label for="name">Nama</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name"  required>
               </div>
               <div class="form-group mb-3">
                 <label for="ttl">Tanggal Lahir</label>
-                <input type="date" class="form-control" id="ttl" name="tgl_lahir">
+                <input type="date" class="form-control" id="ttl" name="tgl_lahir"  required>
               </div>
               <div class="form-group mb-3">
                 <label for="jenis_kelamin">Jenis Kelaim</label>
-                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+                <select class="form-control" id="jenis_kelamin" name="jenis_kelamin"  required>
                   <option value="">Pilih</option>
                   <option value="1">Laki-Laki</option>
                   <option value="2">Permepuan</option>
@@ -46,7 +46,7 @@
               </div>
               <div class="form-group mb-3">
                 <label for="pendidikan">Pendidikan</label>
-                <select class="form-control" id="pendidikan" name="pendidikan">
+                <select class="form-control" id="pendidikan" name="pendidikan"  required>
                   <option value="">Pilih</option>
                   <option value="1">SD</option>
                   <option value="2">SMP</option>
@@ -58,13 +58,13 @@
               </div>
               <div class="form-group mb-3">
                 <label for="opd_id">Ditujukan Untuk Dinas?</label>
-                <select class="form-control" id="opd_id" name="opd_id">
+                <select class="form-control" id="opd_id" name="opd_id"  required>
                   <option value="">Pilih</option>
                 </select>
               </div>
               <div class="form-group mb-3">
                 <label for="alamat">Alamat</label>
-                <textarea type="text" class="form-control" id="alamat" name="alamat"></textarea>
+                <textarea type="text" class="form-control" id="alamat" name="alamat"  required></textarea>
               </div>
             </div>
             <div class="faq__wrapper my-3 p-3 rounded shadow-sm">
@@ -440,7 +440,7 @@
                    </div>
                 </div>
                 @include('components.btn._loading_btn')
-                <button id="btn_submit" type="submit" class="w-btn mt-3">KIIRM</button>
+                <button id="btn_submit" type="submit" class="w-btn mt-3">KIRIM</button>
             </div>
           </form>
         </div>

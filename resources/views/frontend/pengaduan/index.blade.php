@@ -30,23 +30,23 @@
             <form id="pengaduanStore">
                 <div class="form-group mb-3">
                   <label for="name">Nama</label>
-                  <input type="text" class="form-control" id="name" name="name">
+                  <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="form-group mb-3">
                   <label for="nik">NIK</label>
-                  <input type="number" class="form-control" id="nik" name="nik">
+                  <input type="number" class="form-control" id="nik" name="nik" required>
                 </div>
                 <div class="form-group mb-3">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" name="email">
+                  <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group mb-3">
                   <label for="email">No Tlp/WhatsApp</label>
-                  <input type="number" class="form-control" id="no_tlp" name="no_tlp">
+                  <input type="number" class="form-control" id="no_tlp" name="no_tlp" required>
                 </div>
                 <div class="form-group mb-2">
                     <label for="jenis_aduan">Pilih Jenis Saran/aduan/pertanyaan</label>
-                    <select class="form-control" id="jenis_aduan" name="jenisaduan_id">
+                    <select class="form-control" id="jenis_aduan" name="jenisaduan_id" required>
                       <option>--Pilih disini--</option>
                       <option value="1">Saran</option>
                       <option value="2">Aduan</option>
@@ -55,16 +55,16 @@
                   </div>
                   <div class="form-group mb-3">
                     <label for="opd_id">Ditujukan Untuk Dinas?</label>
-                    <select class="form-control" id="opd_id" name="opd_id">
+                    <select class="form-control" id="opd_id" name="opd_id" required>
                       <option value="">Pilih</option>
                     </select>
                   </div>
                   <div class="form-group mb-3">
                     <label for="exampleFormControlTextarea1">Pesan Anda</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pesan"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pesan"  required></textarea>
                   </div>
                   @include('components.btn._loading_btn')
-                <button id="btn_submit" type="submit" class="w-btn btn-lg btn-block">Submit</button>
+                <button id="btn_submit" type="submit" class="w-btn btn-lg btn-block">KIRIM</button>
               </form>
         </div>
     </div>

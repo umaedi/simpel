@@ -56,7 +56,7 @@
                <div class="row align-items-center">
                   <div class="col-xxl-3 col-xl-3 col-lg-2 col-md-6 col-6">
                      <div class="logo">
-                        <a href="index.html">
+                        <a href="/">
                            <img src="{{ asset('frontend') }}/img/logo/logo-tuba.png" alt="logo" width="40">
                         </a>
                      </div>

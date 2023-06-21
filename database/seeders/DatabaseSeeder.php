@@ -23,11 +23,12 @@ class DatabaseSeeder extends Seeder
 
         $variable = [
             ['nama_opd'  => 'DPMPTSP'],
-            ['nama_opd'  => 'MPP'],
-            ['nama_opd'  => 'DISDUKCAPIL'],
-            ['nama_opd'  => 'POLRES'],
             ['nama_opd'  => 'DINAS KESEHATAN'],
-            ['nama_opd'  => 'DISPENDA'],
+            ['nama_opd'  => 'DINAS LINGKUNGAN HIDUP'],
+            ['nama_opd'  => 'DINAS PENDIDIKAN'],
+            ['nama_opd'  => 'DINAS PERDAGANGAN'],
+            ['nama_opd'  => 'DINAS KESBANGPOL'],
+            ['nama_opd'  => 'DINAS PUPR'],
         ];
 
         foreach ($variable as $value) {

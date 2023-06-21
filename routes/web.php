@@ -31,3 +31,6 @@ Route::prefix('user')->group(function () {
     //notifikasi
     Route::get('/notofikasi/sukses', \App\Http\Controllers\Frontend\NotifikasiController::class);
 });
+
+//BACKEND
+Route::get('/admin/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
