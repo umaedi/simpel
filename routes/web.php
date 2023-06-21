@@ -33,4 +33,10 @@ Route::prefix('user')->group(function () {
 });
 
 //BACKEND
-Route::get('/admin/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
+    Route::controller(\App\Http\Controllers\Admin\PerizinanController::class)->group(function () {
+        Route::get('/perizinan', 'index')->name('perizinan.index');
+        Route::post('/perizinan/store', 'store')->name('perizinan.store');
+    });
+});

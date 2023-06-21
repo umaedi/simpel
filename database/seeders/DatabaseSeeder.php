@@ -29,6 +29,9 @@ class DatabaseSeeder extends Seeder
             ['nama_opd'  => 'DINAS PERDAGANGAN'],
             ['nama_opd'  => 'DINAS KESBANGPOL'],
             ['nama_opd'  => 'DINAS PUPR'],
+            ['nama_opd'  => 'DINAS PARIWISATA'],
+            ['nama_opd'  => 'DINAS PERTANIAN'],
+            ['nama_opd'  => 'DINAS PERIKANAN'],
         ];
 
         foreach ($variable as $value) {
