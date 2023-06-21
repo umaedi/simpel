@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Services\AduanService;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Response as Controller;
+use App\Models\Opd;
 
 class PengaduanController extends Controller
 {
@@ -17,6 +18,10 @@ class PengaduanController extends Controller
     }
     public function index()
     {
+        if (\request()->ajax()) {
+            $opd = Opd::all();
+            return $this->sendResponseOk($opd);
+        }
         $data['title'] = 'Layanan Pengaduan';
         return view('frontend.pengaduan.index', $data);
     }

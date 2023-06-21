@@ -20,5 +20,18 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $variable = [
+            ['nama_opd'  => 'DPMPTSP'],
+            ['nama_opd'  => 'MPP'],
+            ['nama_opd'  => 'DISDUKCAPIL'],
+            ['nama_opd'  => 'POLRES'],
+            ['nama_opd'  => 'DINAS KESEHATAN'],
+            ['nama_opd'  => 'DISPENDA'],
+        ];
+
+        foreach ($variable as $value) {
+            \App\Models\Opd::create($value);
+        }
     }
 }

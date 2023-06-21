@@ -26,6 +26,7 @@ Route::prefix('user')->group(function () {
 
     //survey
     Route::get('/survey', [\App\Http\Controllers\Frontend\SurveyController::class, 'index'])->name('survey.index');
+    Route::post('/survey/store', [\App\Http\Controllers\Frontend\SurveyController::class, 'store'])->name('survey.store');
 
     //notifikasi
     Route::get('/notofikasi/sukses', \App\Http\Controllers\Frontend\NotifikasiController::class);

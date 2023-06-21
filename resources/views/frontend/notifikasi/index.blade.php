@@ -9,7 +9,9 @@
                    <img src="{{ asset('frontend') }}/img/services/success.svg" alt="">
                 </div>
                 <div class="services__content-4 text-center" id="notifikasi">
-                   
+                    <h3>BERHASIL TERKIRIM</h3>
+                    <P>Pesan yang Anda sampaikan sudah terkirim dan kami terima, kami akan segera menanggapi pesan Anda</P>
+                    <a href="/" class="w-btn">Kembali</a>
                 </div>
              </div>
           </div>
@@ -17,17 +19,3 @@
     </div>
  </section>
 @endsection
-@push('js')
-    <script type="text/javascript">
-        let data = JSON.parse(localStorage.getItem('data_user'));
-        console.log(data);
-        $(document).ready(function() {
-            let el = document.getElementById('notifikasi');
-            el.innerHTML =`
-                <h3>BERHASIL TERKIRIM</h3>
-                    <P>Terimakasih atas ${data.jenis_aduan} nya, kami akan segera membalas/menjawab ${data.jenis_aduan} Anda</P>
-                <a href="/" class="w-btn">Kembali</a>
-            `;
-        });
-    </script>
-@endpush

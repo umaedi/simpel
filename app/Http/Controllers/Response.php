@@ -6,6 +6,19 @@ use App\Http\Controllers\Controller as Controller;
 
 class Response extends Controller
 {
+    public function sendResponseOk($result)
+    {
+        $response = [
+            'success' => true,
+            'message' => 'Your request has been found',
+        ];
+        if (!empty($result)) {
+            $response['data'] = $result;
+        }
+
+        return response()->json($response, 200);
+    }
+
     public function sendResponseCreate($result)
     {
         $response = [

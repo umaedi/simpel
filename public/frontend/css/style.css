@@ -304,7 +304,7 @@ p {
 }
 
 .dark-blue-bg {
-  background: #063E85;
+  background: #392193;
 }
 
 .footer-bg-3 {
@@ -469,10 +469,10 @@ p {
 .w-btn {
   font-size: 15px;
   color: #ffffff;
-  background: #063E85;
+  background: #392193;
   height: 44px;
   line-height: 40px;
-  border: 2px solid #063E85;
+  border: 2px solid #392193;
   text-align: center;
   padding: 0 30px;
   display: inline-block;
@@ -1478,7 +1478,7 @@ p {
   font-weight: 600;
   color: #070337;
   display: block;
-  padding: 35px 0;
+  padding: 25px 0;
 }
 .main-menu ul li:hover > a {
   color: #7127ea;

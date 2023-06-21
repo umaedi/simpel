@@ -26,7 +26,7 @@
               <h1 class="h6 mb-0 text-white lh-1">{{ __('Survey Kepuasan Masyarakat') }}</h1>
             </div>
         </div>
-        <form action="">
+        <form id="formAjax">
             <div class="my-3 p-3 rounded shadow-sm">
               <div class="form-group mb-3">
                 <label for="name">Nama</label>
@@ -57,6 +57,12 @@
                 </select>
               </div>
               <div class="form-group mb-3">
+                <label for="opd_id">Ditujukan Untuk Dinas?</label>
+                <select class="form-control" id="opd_id" name="opd_id">
+                  <option value="">Pilih</option>
+                </select>
+              </div>
+              <div class="form-group mb-3">
                 <label for="alamat">Alamat</label>
                 <textarea type="text" class="form-control" id="alamat" name="alamat"></textarea>
               </div>
@@ -78,25 +84,25 @@
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_2" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_3" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_4" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_5" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -113,7 +119,7 @@
                      <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_2" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
@@ -125,19 +131,19 @@
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_3" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_2" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_4" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_2" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_5" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_2" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -154,13 +160,13 @@
                      <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_3" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_2" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_3" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
@@ -172,13 +178,13 @@
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_4" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_3" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_5" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_3" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -195,31 +201,31 @@
                      <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_4" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -236,31 +242,31 @@
                      <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_5" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -277,31 +283,31 @@
                      <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_6" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_6" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_6" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_6" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_6" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -318,31 +324,31 @@
                      <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_7" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_7" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_7" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_7" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_7" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -359,31 +365,31 @@
                      <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_8" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_8" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_8" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_8" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_8" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -400,31 +406,31 @@
                      <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv1" value="10" checked>
+                            <input class="form-check-input" type="radio" name="indikator_9" id="surv1" value="10" checked>
                             <label class="form-check-label" for="surv1">
                                 A (Sangat Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv2" value="7">
+                            <input class="form-check-input" type="radio" name="indikator_9" id="surv2" value="7">
                             <label class="form-check-label" for="surv2">
                                 B (Baik)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv3" value="6">
+                            <input class="form-check-input" type="radio" name="indikator_9" id="surv3" value="6">
                             <label class="form-check-label" for="surv3">
                                 C (Cukup)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv4" value="5">
+                            <input class="form-check-input" type="radio" name="indikator_9" id="surv4" value="5">
                             <label class="form-check-label" for="surv4">
                                 D (Buruk)
                             </label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="indikator_1" id="surv5" value="3">
+                            <input class="form-check-input" type="radio" name="indikator_9" id="surv5" value="3">
                             <label class="form-check-label" for="surv5">
                                 E (Sangat Buruk)
                             </label>
@@ -433,7 +439,8 @@
                      </div>
                    </div>
                 </div>
-                <button type="submit" class="w-btn mt-3">KIIRM</button>
+                @include('components.btn._loading_btn')
+                <button id="btn_submit" type="submit" class="w-btn mt-3">KIIRM</button>
             </div>
           </form>
         </div>
@@ -442,17 +449,22 @@
 @endsection
 @push('js')
     <script type="text/javascript">
-    var name = ''
-     let data = JSON.parse(localStorage.getItem('data_user'));
+    $(document).ready(async function getopd() {
+        var param = {
+            method: 'GET',
+            url: '{{ url()->current() }}',
+        }
 
-     if(data !== null) {
-        let name = document.getElementById('name').value = data.name;
-        let nik = document.getElementById('nik').value = data.nik;
-        let email = document.getElementById('email').value = data.email;
-        let no_tlp = document.getElementById('no_tlp').value = data.no_tlp;
-     }
+        await transAjax(param).then(function(res) {
+            res.data.forEach(el => {
+              $('#opd_id').append(`
+                  <option value="${el.id}">${el.nama_opd}</option>      
+              `);
+            });
+        });
+    });
 
-      $('#pengaduanStore').submit(async function store(e) {
+      $('#formAjax').submit(async function store(e) {
           e.preventDefault();
 
           var form 	= $(this)[0]; 
@@ -460,7 +472,7 @@
 
           var param = {
               method: 'POST',
-              url: '/user/layanan/pengaduan/store',
+              url: '/user/survey/store',
               data: data,
               processData: false,
               contentType: false,
@@ -487,17 +499,6 @@
                   $('#btn_submit').removeClass('d-none');
               }
           }  
-
-          //localStorage
-          let name = document.getElementById('name');
-          let nik = document.getElementById('nik');
-          let email = document.getElementById('email');
-          let no_tlp = document.getElementById('no_tlp');
-          let jenis_aduan = document.getElementById('jenis_aduan');
-
-          let data_user = {name: name.value, nik: nik.value, email: email.value, no_tlp: no_tlp.value, jenis_aduan: jenis_aduan.options[jenis_aduan.selectedIndex].text};
-
-          localStorage.setItem('data_user', JSON.stringify(data_user));
       });
     </script>
 @endpush

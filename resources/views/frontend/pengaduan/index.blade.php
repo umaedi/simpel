@@ -52,20 +52,14 @@
                       <option value="2">Aduan</option>
                       <option value="3">Pertanyaan</option>
                     </select>
-                </div>
-                <div class="form-group mb-2">
-                    <label for="exampleFormControlSelect2">Instansi/Pelayanan</label>
-                    <select class="form-control" id="exampleFormControlSelect2" name="opd_id">
-                      <option>--Pilih disini--</option>
-                      <option value="1">MPP</option>
-                      <option value="2">DISDUKCAPIL</option>
-                      <option value="3">PLRES</option>
-                      <option value="4">DINAS KESEHATAN</option>
-                      <option value="5">DPMPTSP</option>
-                      <option value="6">DISPENDA</option>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="opd_id">Ditujukan Untuk Dinas?</label>
+                    <select class="form-control" id="opd_id" name="opd_id">
+                      <option value="">Pilih</option>
                     </select>
-                </div>
-                <div class="form-group mb-3">
+                  </div>
+                  <div class="form-group mb-3">
                     <label for="exampleFormControlTextarea1">Pesan Anda</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="pesan"></textarea>
                   </div>
@@ -87,6 +81,21 @@
         let email = document.getElementById('email').value = data.email;
         let no_tlp = document.getElementById('no_tlp').value = data.no_tlp;
      }
+
+     $(document).ready(async function getopd() {
+        var param = {
+            method: 'GET',
+            url: '{{ url()->current() }}',
+        }
+
+        await transAjax(param).then(function(res) {
+            res.data.forEach(el => {
+              $('#opd_id').append(`
+                  <option value="${el.id}">${el.nama_opd}</option>      
+              `);
+            });
+        });
+    });
 
       $('#pengaduanStore').submit(async function store(e) {
           e.preventDefault();
