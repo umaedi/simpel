@@ -25,45 +25,49 @@
         </div>
         <div class="card">
           <div class="card-header">
-            <button type="button" class="btn btn-primary">
-                Persyarat Dasar <span class="badge badge-transparent">{{ $persayaratan_dasar }}</span>
+            <button type="button" class="btn btn-primary mr-2">
+              Sertifikat Standar <span class="badge badge-transparent">{{ $sertifikat_standar }}</span>
+          </button>
+            <button type="button" class="btn btn-primary mr-2">
+                Persyaratan Dasar <span class="badge badge-transparent">{{ $persayaratan_dasar }}</span>
             </button>
-            <button type="button" class="btn btn-primary ml-2">
-                Sertifikat Standar <span class="badge badge-transparent">{{ $sertifikat_standar }}</span>
+            <button type="button" class="btn btn-primary">
+                UMKU <span class="badge badge-transparent">{{ $umku }}</span>
             </button>
           </div>
           <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-sm">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="#">Tampilkan Berdasarkan Jenis Izin</label>
+                <select class="form-control" name="jenis_perizinan" id="jenisPerizinan">
+                  <option value="">--pilih--</option>
+                  <option value="Sertifikat Standar">Sertifikat Standar</option>
+                  <option value="Persyarat Dasar">Persyaratan Dasar</option>
+                  <option value="UMKU">UMKU</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="#">Tampilkan Berdasarkan Nama Dokumen</label>
+                <select class="form-control" name="nama_dokumen" id="namaDokumen">
+                  <option value="">--pilih--</option>
+                  <option value="SPPL">SPPL</option>
+                  <option value="Sertifikat Standar">Sertifikat Standar</option>
+                  <option value="Persetujuan PKPLH">Persetujuan PKPLH</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputEmail4">Perhalaman</label>
+                <select class="form-control" name="perpage" id="perPage">
+                  <option value="">--pilih--</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div>
+            </div>
+            <div class="table-responsive" id="data-table">
+                
               </div>
           </div>
         </div>
@@ -73,10 +77,33 @@
 @endsection
 @push('js')
     <script type="text/javascript">
+    var page = 1;
+    var paginate = 10;
+    var jenis_perizinan = '';
+    var nama_dokumen = '';
         $(document).ready(function() {
             loadData();
+
+            $('#jenisPerizinan').change(() => {
+              filterTable();
+            });
+
+            $('#namaDokumen').change(() => {
+              filterTable();
+            });
+
+            $('#perPage').change(() => {
+                filterTable();
+            });
         });
 
+        function filterTable()
+        {
+          jenis_perizinan = $('#jenisPerizinan').val();
+          nama_dokumen = $('#namaDokumen').val();
+          paginate = $('#perPage').val(); 
+          loadData();
+        }
         async function loadData()
         {
             var param = {
@@ -84,11 +111,21 @@
                 url: '{{ url()->current() }}',
                 data: {
                     load: 'table',
+                    page: page,
+                    jenis_perizinan: jenis_perizinan,
+                    nama_dokumen: nama_dokumen,
+                    paginate: paginate
                 }
             }
             await transAjax(param).then((res) => {
-                console.log(ress);
+                $('#data-table').html(res);
             });
+        }
+
+        //paginate
+        function loadPaginate(to) {
+            page = to
+            filterTable()
         }
 
         $('#formAjax').submit(async function store(e) {

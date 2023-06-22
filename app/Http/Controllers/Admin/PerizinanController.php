@@ -19,13 +19,25 @@ class PerizinanController extends Controller
 
     public function index()
     {
-        $perizinan = $this->perizinan->Query();
         if (\request()->ajax()) {
-            // $data = $this->perizinan->Query()->
+            $perizinan = $this->perizinan->Query();
+            $page = \request()->get('paginate', 10);
+
+            if (\request()->jenis_perizinan) {
+                $perizinan->where('jenis_perizinan', request()->jenis_perizinan);
+            }
+
+            if (\request()->nama_dokumen) {
+                $perizinan->where('nama_dokumen', request()->nama_dokumen);
+            }
+
+            $data['table'] = $perizinan->latest()->paginate($page);
+            return view('admin.perizinan._data_table', $data);
         }
 
-        $data['persayaratan_dasar'] = $perizinan->where('jenis_perizinan', 'Persyarat Dasar')->count();
-        $data['sertifikat_standar'] = $perizinan->where('jenis_perizinan', 'Sertifikat Standar')->count();
+        $data['persayaratan_dasar'] = Perizinan::where('jenis_perizinan', 'Sertifikat Standar')->count();
+        $data['sertifikat_standar'] = Perizinan::where('jenis_perizinan', 'Persyarat Dasar')->count();
+        $data['umku'] = Perizinan::where('jenis_perizinan', 'UMKU')->count();
         return view('admin.perizinan.index', $data);
     }
 
