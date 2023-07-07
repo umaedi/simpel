@@ -32,7 +32,7 @@
         @endforeach
         
         @if ($paginator->hasMorePages())
-            <li class="page-item">
+            <li class="page-item mr-3">
                 <a class="page-link" onclick="loadPaginate({{ explode('page=',$paginator->nextPageUrl())[1]}})" href="javascript:void(0);">
                     Next
                 </a>

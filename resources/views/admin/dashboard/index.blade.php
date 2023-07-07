@@ -5,38 +5,19 @@
       <div class="row">
         <div class="col-lg-12 col-md-12">
           <div class="card card-statistic-2 pb-5">
-            <div class="card-stats">
-              <div class="card-stats-title">Order Statistics -
-                <div class="dropdown d-inline">
-                  <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">August</a>
-                  <ul class="dropdown-menu dropdown-menu-sm">
-                    <li class="dropdown-title">Select Month</li>
-                    <li><a href="#" class="dropdown-item">January</a></li>
-                    <li><a href="#" class="dropdown-item">February</a></li>
-                    <li><a href="#" class="dropdown-item">March</a></li>
-                    <li><a href="#" class="dropdown-item">April</a></li>
-                    <li><a href="#" class="dropdown-item">May</a></li>
-                    <li><a href="#" class="dropdown-item">June</a></li>
-                    <li><a href="#" class="dropdown-item">July</a></li>
-                    <li><a href="#" class="dropdown-item active">August</a></li>
-                    <li><a href="#" class="dropdown-item">September</a></li>
-                    <li><a href="#" class="dropdown-item">October</a></li>
-                    <li><a href="#" class="dropdown-item">November</a></li>
-                    <li><a href="#" class="dropdown-item">December</a></li>
-                  </ul>
-                </div>
-              </div>
+            <div class="card-stats py-3">
               <div class="card-stats-items row">
                 <div class="card-stats-item">
                   <a href="{{ route('perizinan.index') }}" style="text-decoration: none">
-                    <div class="card-stats-item-count">24</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#6777ef}</style><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/></svg>
-                    <div class="card-stats-item-label">PERIZINAN</div>
+                    <div class="card-stats-item-count">0</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#392193}</style><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"/></svg>
+                    <div class="card-stats-item-label">ANTREAN</div>
                   </a>
                 </div>
                 <div class="card-stats-item">
                   <div class="card-stats-item-count">12</div>
-                  <div class="card-stats-item-label">Shipping</div>
+                  <i class="fa-light fa-phone-volume" style="color: #6777ef;"></i>
+                  <div class="card-stats-item-label">ADUAN</div>
                 </div>
                 <div class="card-stats-item">
                   <div class="card-stats-item-count">23</div>

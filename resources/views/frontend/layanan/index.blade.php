@@ -82,13 +82,13 @@
           </div>
           <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
              <div class="services__inner hover__active mb-30 wow fadeInUp" data-wow-delay=".9s">
-                <a href="">
+                <a href="{{ route('data.index') }}">
                 <div class="services__item white-bg text-center transition-3">
                    <div class="services__icon mb-25 d-flex align-items-end justify-content-center">
                       <img src="{{ asset('frontend') }}/img/icon/services/home-1/services-4.png" alt="">
                    </div>
                    <div class="services__content">
-                      <h3 class="services__title"><a href="services-details.html">Data</a></h3>
+                      <h3 class="services__title">Data</h3>
                       <p>Data statistik.</p>
                    </div>
                 </div>

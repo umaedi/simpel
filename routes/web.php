@@ -28,13 +28,17 @@ Route::prefix('user')->group(function () {
     Route::get('/survey', [\App\Http\Controllers\Frontend\SurveyController::class, 'index'])->name('survey.index');
     Route::post('/survey/store', [\App\Http\Controllers\Frontend\SurveyController::class, 'store'])->name('survey.store');
 
+    //data statistik
+    Route::get('/data', [\App\Http\Controllers\Frontend\DataController::class, 'index'])->name('data.index');
+
     //notifikasi
     Route::get('/notofikasi/sukses', \App\Http\Controllers\Frontend\NotifikasiController::class);
 });
 
 //BACKEND
+Route::get('/login', [\App\Http\Controllers\Admin\Auth\LoginController::class, 'index']);
 Route::prefix('admin')->group(function () {
-    Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
+    Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index']);
     Route::controller(\App\Http\Controllers\Admin\PerizinanController::class)->group(function () {
         Route::get('/perizinan', 'index')->name('perizinan.index');
         Route::post('/perizinan/store', 'store')->name('perizinan.store');
