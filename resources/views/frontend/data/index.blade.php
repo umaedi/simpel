@@ -24,17 +24,17 @@
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <a href="/user/export/?data=Sertifikat Standar"  class="w-btn w-btn-1 w-100">
+                    <a href="/user/export/?data=Sertifikat Standar" target="_blank" class="w-btn w-btn-1 w-100">
                         Sertifikat Standar <span>{{ $sertifikat_standar }}</span>
                     </a>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <a href="/user/export/?data=Persyarat Dasar" onclick="exportData('persayaratan_dasar')" class="w-btn w-btn-1 w-100">
+                    <a href="/user/export/?data=Persyarat Dasar" target="_blank" class="w-btn w-btn-1 w-100">
                         Persyaratan Dasar <span>{{ $persayaratan_dasar }}</span>
                     </a>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <a href="/user/export/?data=UMKU" onclick="exportData('umku')" class="w-btn w-btn-1 w-100">
+                    <a href="/user/export/?data=UMKU" target="_blank" class="w-btn w-btn-1 w-100">
                         UMKU <span>{{ $umku }}</span>
                     </a>
                 </div>

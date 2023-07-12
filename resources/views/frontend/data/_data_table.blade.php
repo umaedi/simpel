@@ -47,12 +47,8 @@
     @endforelse
     </tbody>
 </table>
-<div class="text-center">
-    {{ $table->links('pagination.stisla-paging') }}
+<div class="container">
+    <div class="row justify-content-center">
+        {{ $table->links('pagination.stisla-paging') }}
+    </div>
 </div>
-{{-- <div class="container text-center"> --}}
-    {{-- <p class="m-0 text-muted">Showing <span>{{ $table->firstItem() }}</span> to <span>{{ $table->lastItem() }}</span> of <span>{{ $table->total() }}</span> data</p> --}}
-    {{-- <div class="row"> --}}
-        {{-- {{ $table->links('pagination.stisla-paging') }} --}}
-    {{-- </div> --}}
-{{-- </div> --}}
