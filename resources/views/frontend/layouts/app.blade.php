@@ -66,7 +66,7 @@
                         <nav id="mobile-menu">
                            <ul>
                               <li><a href="/">HOME</a></li>
-                              <li><a href="#">DATA STATISTIK</a></li>
+                              <li><a href="/user/data">DATA PERIZINAN</a></li>
                               <li><a href="{{ route('layanan.pengaduan') }}">SARAN DAN ADUAN</a></li>
                            </ul>
                         </nav>
