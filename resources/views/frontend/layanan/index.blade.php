@@ -89,7 +89,7 @@
                    </div>
                    <div class="services__content">
                       <h3 class="services__title">Data</h3>
-                      <p>Data statistik.</p>
+                      <p>Data Perizinan</p>
                    </div>
                 </div>
                 </a>
