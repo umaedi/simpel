@@ -33,6 +33,8 @@ Route::prefix('user')->group(function () {
 
     //notifikasi
     Route::get('/notofikasi/sukses', \App\Http\Controllers\Frontend\NotifikasiController::class);
+
+    Route::get('/export', App\Http\Controllers\Frontend\ExportController::class);
 });
 
 //BACKEND

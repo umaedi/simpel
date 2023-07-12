@@ -21,27 +21,22 @@
 </section>
 <section class="portfolio__area pb-90 pt-50">
     <div class="container">
-        <div class="d-flex align-items-center p-3 my-1 text-white dark-blue-bg rounded shadow-sm" >
-            <div class="lh-1">
-              <h1 class="h6 mb-0 text-white lh-1">{{ __('Data Perizinan Berusaha') }}</h1>
-            </div>
-        </div>
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <button type="button" class="w-btn w-btn-1 w-100">
-                        Sertifikat Standar <span>{{ $persayaratan_dasar }}</span>
-                    </button>
+                    <a href="/user/export/?data=Sertifikat Standar"  class="w-btn w-btn-1 w-100">
+                        Sertifikat Standar <span>{{ $sertifikat_standar }}</span>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <button type="button" class="w-btn w-btn-1 w-100">
-                        Persyaratan Dasar <span>{{ $sertifikat_standar }}</span>
-                    </button>
+                    <a href="/user/export/?data=Persyarat Dasar" onclick="exportData('persayaratan_dasar')" class="w-btn w-btn-1 w-100">
+                        Persyaratan Dasar <span>{{ $persayaratan_dasar }}</span>
+                    </a>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <button type="button" class="w-btn w-btn-1 w-100">
+                    <a href="/user/export/?data=UMKU" onclick="exportData('umku')" class="w-btn w-btn-1 w-100">
                         UMKU <span>{{ $umku }}</span>
-                    </button>
+                    </a>
                 </div>
             </div>
             <hr>

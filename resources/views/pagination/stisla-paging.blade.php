@@ -42,9 +42,6 @@
                 <a class="page-link" href="#">Next</a>
             </li>
         @endif
-        <li class="page-item">
-            <button class="btn btn-primary">Download</button>
-        </li>
     </ul>
 </nav>
 @endif

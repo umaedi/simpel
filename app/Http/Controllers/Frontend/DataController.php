@@ -18,7 +18,7 @@ class DataController extends Controller
         if (\request()->ajax()) {
             if (\request()->ajax()) {
                 $perizinan = $this->perizinan->Query();
-                $page = \request()->get('paginate', 10);
+                $page = \request()->get('paginate', 15);
 
                 if (\request()->jenis_perizinan) {
                     $perizinan->where('jenis_perizinan', request()->jenis_perizinan);

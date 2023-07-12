@@ -8,10 +8,16 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 class PerizinanExport implements FromCollection
 {
     /**
-    * @return \Illuminate\Support\Collection
-    */
+     * @return \Illuminate\Support\Collection
+     */
+    protected $data;
+
+    public function __construct($data)
+    {
+        $this->data = $data;
+    }
     public function collection()
     {
-        return Perizinan::all();
+        return Perizinan::where('jenis_perizinan', $this->data)->get();
     }
 }
