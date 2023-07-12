@@ -83,7 +83,7 @@
 @push('js')
     <script type="text/javascript">
     var page = 1;
-    var paginate = 10;
+    var paginate = 15;
     var jenis_perizinan = '';
     var nama_dokumen = '';
         $(document).ready(function() {
